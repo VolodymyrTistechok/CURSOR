@@ -20,6 +20,7 @@ public class Main {
         System.out.println();
 
         System.out.println("task3");
+        Cars opel = new Cars(400);
         Cars bmw = new Cars(200);
         bmw.setSpeed(100);
         System.out.println(bmw);
@@ -49,9 +50,9 @@ public class Main {
         System.out.println(my.divisionMoney(friends));
         System.out.println(my.multiplication(2.5));
         System.out.println(my.division(2));
-        System.out.println(my.more(friends));
+        my.equals(friends);
         my = my.addition(new Money(4L, (byte) 50));
-        System.out.println(my.equal(friends));
+        my.equals(friends);
 
     }
 }

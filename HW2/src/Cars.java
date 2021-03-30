@@ -4,11 +4,16 @@ public class Cars {
     private int gear = 0;
     private int maxSpeed = 0;
 
-    public Cars(int maxSpeed) {
+    public Cars(int maxSpeed)  {
+
         if (maxSpeed < 300 && maxSpeed > 100) {
             this.maxSpeed = maxSpeed;
         } else {
-            System.out.println("enter a value between 100 and 300");
+            try {
+                throw new Exception("enter a value between 100 and 300");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

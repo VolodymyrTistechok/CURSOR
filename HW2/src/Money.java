@@ -41,12 +41,32 @@ public class Money {
         return new Money((long) (value), (byte) (Math.abs(value - (long) (value)) * 100));
     }
 
-    public boolean more(Money secondMoney) {
+/*    public boolean more(Money secondMoney) {
         return this.resultHryvnia > secondMoney.resultHryvnia;
     }
 
     public boolean equal(Money secondMoney) {
         return this.resultHryvnia == secondMoney.resultHryvnia;
+    }
+*/
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Money secondMoney = (Money) o;
+        if (this.resultHryvnia == secondMoney.resultHryvnia) {
+            System.out.print("true ");
+            System.out.println(this.toString() + " = " + secondMoney.toString());
+            return true;
+        } else if (this.resultHryvnia > secondMoney.resultHryvnia) {
+            System.out.print("false ");
+            System.out.println(this.toString() + " > " + secondMoney.toString());
+            return false;
+        } else {
+            System.out.print("false ");
+            System.out.println(this.toString() + " < " + secondMoney.toString());
+            return false;
+        }
     }
 
     @Override
