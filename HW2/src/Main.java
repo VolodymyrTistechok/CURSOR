@@ -50,9 +50,9 @@ public class Main {
         System.out.println(my.divisionMoney(friends));
         System.out.println(my.multiplication(2.5));
         System.out.println(my.division(2));
-        my.equals(friends);
+        System.out.println(my.equals(friends));
         my = my.addition(new Money(4L, (byte) 50));
-        my.equals(friends);
+        System.out.println(my.equals(friends));
 
     }
 }

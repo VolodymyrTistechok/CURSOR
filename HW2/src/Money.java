@@ -55,16 +55,8 @@ public class Money {
         if (o == null || getClass() != o.getClass()) return false;
         Money secondMoney = (Money) o;
         if (this.resultHryvnia == secondMoney.resultHryvnia) {
-            System.out.print("true ");
-            System.out.println(this.toString() + " = " + secondMoney.toString());
             return true;
-        } else if (this.resultHryvnia > secondMoney.resultHryvnia) {
-            System.out.print("false ");
-            System.out.println(this.toString() + " > " + secondMoney.toString());
-            return false;
         } else {
-            System.out.print("false ");
-            System.out.println(this.toString() + " < " + secondMoney.toString());
             return false;
         }
     }
