@@ -2,14 +2,8 @@ import customer.Customer;
 import product.ElectonicsProduct.Computer;
 import product.FoodProduct;
 import product.MyDate;
-import product.Product;
 import product.ageRestriction;
 import purchaseManager.PurchaseManager;
-
-import java.time.ZonedDateTime;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class Test {
     public static void main(String[] args) {
