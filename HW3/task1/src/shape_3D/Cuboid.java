@@ -1,36 +1,36 @@
 package shape_3D;
 
-import interfaces.AreaMeasurable;
-import interfaces.VolumeMeasurable;
-import shape_classes.Shape;
 import shape_classes.SpaceShape;
+import vertices.vertices3D;
 
-public class Cuboid extends Shape implements AreaMeasurable, VolumeMeasurable {
-    private final SpaceShape center;
-    private final int width;
-    private final int height;
-    private final int depth;
+import java.util.ArrayList;
 
-    public Cuboid(SpaceShape pointA, int width, int height, int depth) {
-        this.center = pointA;
+public class Cuboid extends SpaceShape {
+    private final double width;
+    private final double height;
+    private final double depth;
+
+    public Cuboid(vertices3D pointA, int width, int height, int depth) {
+        vertices = new ArrayList<>();
+        vertices.add(pointA);
         this.width = width;
         this.height = height;
         this.depth = depth;
     }
 
-    public SpaceShape getPointA() {
-        return center;
+    public vertices3D getCenter() {
+        return vertices.get(0);
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public int getDepth() {
+    public double getDepth() {
         return depth;
     }
 
@@ -47,7 +47,7 @@ public class Cuboid extends Shape implements AreaMeasurable, VolumeMeasurable {
     @Override
     public String toString() {
         return "Cuboid: " +
-                "center " + center +
+                "center " + vertices.get(0) +
                 ", width = " + width +
                 ", height = " + height +
                 ", depth = " + depth +

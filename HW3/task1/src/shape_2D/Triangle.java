@@ -1,38 +1,35 @@
 package shape_2D;
 
-import interfaces.AreaMeasurable;
-import interfaces.PerimeterMeasurable;
 import shape_classes.PlaneShape;
-import shape_classes.Shape;
-import shape_classes.SpaceShape;
+import vertices.vertices2D;
 
-public class Triangle extends Shape implements PerimeterMeasurable, AreaMeasurable {
-    private final PlaneShape pointA;
-    private final PlaneShape pointB;
-    private final PlaneShape pointC;
+import java.util.ArrayList;
+
+public class Triangle extends PlaneShape  {
     private final double disAB;
     private final double disBC;
     private final double disCA;
 
-    public Triangle(PlaneShape pointA, PlaneShape pointB, PlaneShape pointC) {
-        this.pointA = pointA;
-        this.pointB = pointB;
-        this.pointC = pointC;
-        disAB = SpaceShape.getDistanceBetweenTwo2DVertices(pointA, pointB);
-        disBC = SpaceShape.getDistanceBetweenTwo2DVertices(pointB, pointC);
-        disCA = SpaceShape.getDistanceBetweenTwo2DVertices(pointC, pointA);
+    public Triangle(vertices2D pointA, vertices2D pointB, vertices2D pointC) {
+        vertices = new ArrayList<>();
+        vertices.add(pointA);
+        vertices.add(pointB);
+        vertices.add(pointC);
+        disAB = vertices2D.getDistanceBetweenTwo2DVertices(pointA, pointB);
+        disBC = vertices2D.getDistanceBetweenTwo2DVertices(pointB, pointC);
+        disCA = vertices2D.getDistanceBetweenTwo2DVertices(pointC, pointA);
     }
 
-    public PlaneShape getPointA() {
-        return pointA;
+    public vertices2D getPointA() {
+        return vertices.get(0);
     }
 
-    public PlaneShape getPointB() {
-        return pointB;
+    public vertices2D getPointB() {
+        return vertices.get(1);
     }
 
-    public PlaneShape getPointC() {
-        return pointC;
+    public vertices2D getPointC() {
+        return vertices.get(2);
     }
 
 
@@ -51,9 +48,9 @@ public class Triangle extends Shape implements PerimeterMeasurable, AreaMeasurab
     @Override
     public String toString() {
         return "Triangle: " +
-                "pointA " + pointA +
-                ", pointB " + pointB +
-                ", pointC " + pointC +
+                "pointA " + vertices.get(0) +
+                ", pointB " + vertices.get(1) +
+                ", pointC " + vertices.get(2) +
                 ", Perimeter = " + getPerimeter() +
                 ", Area = " + getArea();
     }

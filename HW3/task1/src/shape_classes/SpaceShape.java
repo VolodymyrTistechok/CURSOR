@@ -1,16 +1,11 @@
 package shape_classes;
 
-public class SpaceShape extends PlaneShape {
+import interfaces.AreaMeasurable;
+import interfaces.VolumeMeasurable;
+import vertices.vertices3D;
 
-    int z;
+import java.util.List;
 
-    public SpaceShape(int x, int y, int z) {
-        super(x, y);
-        this.z = z;
-    }
-
-    @Override
-    public String toString() {
-        return "(x=" + x + ", y=" + y + ", z=" + z + ")";
-    }
+public abstract class SpaceShape extends Shape implements AreaMeasurable, VolumeMeasurable {
+    protected List<vertices3D> vertices;
 }

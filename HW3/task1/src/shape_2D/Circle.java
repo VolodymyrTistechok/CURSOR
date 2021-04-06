@@ -1,24 +1,24 @@
 package shape_2D;
 
-import interfaces.AreaMeasurable;
-import interfaces.PerimeterMeasurable;
 import shape_classes.PlaneShape;
-import shape_classes.Shape;
+import vertices.vertices2D;
 
-public class Circle extends Shape implements PerimeterMeasurable, AreaMeasurable {
-    private final PlaneShape pointA;
-    private final int radius;
+import java.util.ArrayList;
 
-    public Circle(PlaneShape pointA, int radius) {
-        this.pointA = pointA;
+public class Circle extends PlaneShape   {
+    private final double radius;
+
+    public Circle(vertices2D pointA, int radius) {
+        vertices = new ArrayList<>();
+        vertices.add(pointA);
         this.radius = radius;
     }
 
-    public PlaneShape getPointA() {
-        return pointA;
+    public vertices2D getPointA() {
+        return vertices.get(0);
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 
@@ -35,7 +35,7 @@ public class Circle extends Shape implements PerimeterMeasurable, AreaMeasurable
     @Override
     public String toString() {
         return "Circle: " +
-                "pointA " + pointA +
+                "pointA " + vertices.get(0) +
                 ", radius = " + radius +
                 ", Perimeter = " + getPerimeter() +
                 ", Area = " + getArea();

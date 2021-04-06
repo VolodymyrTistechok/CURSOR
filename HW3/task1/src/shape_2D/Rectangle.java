@@ -1,30 +1,30 @@
 package shape_2D;
 
-import interfaces.AreaMeasurable;
-import interfaces.PerimeterMeasurable;
 import shape_classes.PlaneShape;
-import shape_classes.Shape;
+import vertices.vertices2D;
 
-public class Rectangle extends Shape implements PerimeterMeasurable, AreaMeasurable {
-    private final PlaneShape pointA;
-    private final int width;
-    private final int height;
+import java.util.ArrayList;
 
-    public Rectangle(PlaneShape pointA, int width, int height) {
-        this.pointA = pointA;
+public class Rectangle extends PlaneShape {
+    private final double width;
+    private final double height;
+
+    public Rectangle(vertices2D pointA, int width, int height) {
+        vertices = new ArrayList<>();
+        vertices.add(pointA);
         this.width = width;
         this.height = height;
     }
 
-    public PlaneShape getPointA() {
-        return pointA;
+    public vertices2D getPointA() {
+        return vertices.get(0);
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
@@ -41,7 +41,7 @@ public class Rectangle extends Shape implements PerimeterMeasurable, AreaMeasura
     @Override
     public String toString() {
         return "Rectangle: " +
-                "pointA " + pointA +
+                "pointA " + vertices.get(0) +
                 ", width = " + width +
                 ", height = " + height +
                 ", Perimeter = " + getPerimeter() +

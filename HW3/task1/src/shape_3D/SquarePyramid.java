@@ -1,30 +1,30 @@
 package shape_3D;
 
-import interfaces.AreaMeasurable;
-import interfaces.VolumeMeasurable;
-import shape_classes.Shape;
 import shape_classes.SpaceShape;
+import vertices.vertices3D;
 
-public class SquarePyramid extends Shape implements AreaMeasurable, VolumeMeasurable {
-    private final SpaceShape center;
-    private final int baseWidth;
-    private final int height;
+import java.util.ArrayList;
 
-    public SquarePyramid(SpaceShape pointA, int baseWidth, int height) {
-        this.center = pointA;
+public class SquarePyramid extends SpaceShape {
+    private final double baseWidth;
+    private final double height;
+
+    public SquarePyramid(vertices3D pointA, int baseWidth, int height) {
+        vertices = new ArrayList<>();
+        vertices.add(pointA);
         this.baseWidth = baseWidth;
         this.height = height;
     }
 
-    public SpaceShape getPointA() {
-        return center;
+    public vertices3D getPointA() {
+        return vertices.get(0);
     }
 
-    public int getBaseWidth() {
+    public double getBaseWidth() {
         return baseWidth;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
@@ -42,7 +42,7 @@ public class SquarePyramid extends Shape implements AreaMeasurable, VolumeMeasur
     @Override
     public String toString() {
         return "SquarePyramid: " +
-                "center " + center +
+                "center " + vertices.get(0) +
                 ", baseWidth = " + baseWidth +
                 ", height = " + height +
                 ", Area = " + getArea() +

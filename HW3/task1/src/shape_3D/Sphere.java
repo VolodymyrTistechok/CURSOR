@@ -1,24 +1,24 @@
 package shape_3D;
 
-import interfaces.AreaMeasurable;
-import interfaces.VolumeMeasurable;
-import shape_classes.Shape;
 import shape_classes.SpaceShape;
+import vertices.vertices3D;
 
-public class Sphere extends Shape implements AreaMeasurable, VolumeMeasurable {
-    private final SpaceShape center;
-    private final int radius;
+import java.util.ArrayList;
 
-    public Sphere(SpaceShape center, int radius) {
-        this.center = center;
+public class Sphere extends SpaceShape {
+    private final double radius;
+
+    public Sphere(vertices3D center, int radius) {
+        vertices = new ArrayList<>();
+        vertices.add(center);
         this.radius = radius;
     }
 
-    public SpaceShape getCenter() {
-        return center;
+    public vertices3D getCenter() {
+        return vertices.get(0);
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 
@@ -35,7 +35,7 @@ public class Sphere extends Shape implements AreaMeasurable, VolumeMeasurable {
     @Override
     public String toString() {
         return "Sphere: " +
-                "center " + center +
+                "center " + vertices.get(0) +
                 ", radius = " + radius +
                 ", Area = " + getArea() +
                 ", Volume = " + getVolume();
