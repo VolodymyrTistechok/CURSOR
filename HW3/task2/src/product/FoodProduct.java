@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
 public class FoodProduct extends Product implements Expirable {
     private MyDate expirationDate;
 
-    public FoodProduct(String name, double price, int quantity, ageRestriction restriction, MyDate expirationDate) {
+    public FoodProduct(String name, double price, int quantity, AgeRestriction restriction, MyDate expirationDate) {
         super(name, price, quantity, restriction);
         this.expirationDate = expirationDate;
     }

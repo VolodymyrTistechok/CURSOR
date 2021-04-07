@@ -1,6 +1,6 @@
 package product;
 
-public enum ageRestriction {
+public enum AgeRestriction {
     None, Teenager, Adult
 
 }

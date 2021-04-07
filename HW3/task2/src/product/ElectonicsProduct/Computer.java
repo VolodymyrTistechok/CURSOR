@@ -1,9 +1,9 @@
 package product.ElectonicsProduct;
 
-import product.ageRestriction;
+import product.AgeRestriction;
 
 public class Computer extends ElectonicsProduct{
-    public Computer(String name, double price, int quantity, ageRestriction restriction) {
+    public Computer(String name, double price, int quantity, AgeRestriction restriction) {
         super(name, price, quantity, restriction, 24);
     }
 

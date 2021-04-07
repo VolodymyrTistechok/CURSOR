@@ -1,7 +1,7 @@
 package shape_2D;
 
 import shape_classes.PlaneShape;
-import vertices.vertices2D;
+import vertices.Vertices2D;
 
 import java.util.ArrayList;
 
@@ -9,14 +9,14 @@ public class Rectangle extends PlaneShape {
     private final double width;
     private final double height;
 
-    public Rectangle(vertices2D pointA, int width, int height) {
+    public Rectangle(Vertices2D pointA, int width, int height) {
         vertices = new ArrayList<>();
         vertices.add(pointA);
         this.width = width;
         this.height = height;
     }
 
-    public vertices2D getPointA() {
+    public Vertices2D getPointA() {
         return vertices.get(0);
     }
 

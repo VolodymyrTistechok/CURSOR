@@ -1,9 +1,9 @@
 package vertices;
 
-public class vertices3D extends vertices2D{
+public class Vertices3D extends Vertices2D{
     public double z;
 
-    public vertices3D(double x, double y, double z) {
+    public Vertices3D(double x, double y, double z) {
         super(x, y);
         this.z = z;
     }

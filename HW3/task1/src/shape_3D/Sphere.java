@@ -1,20 +1,20 @@
 package shape_3D;
 
 import shape_classes.SpaceShape;
-import vertices.vertices3D;
+import vertices.Vertices3D;
 
 import java.util.ArrayList;
 
 public class Sphere extends SpaceShape {
     private final double radius;
 
-    public Sphere(vertices3D center, int radius) {
+    public Sphere(Vertices3D center, int radius) {
         vertices = new ArrayList<>();
         vertices.add(center);
         this.radius = radius;
     }
 
-    public vertices3D getCenter() {
+    public Vertices3D getCenter() {
         return vertices.get(0);
     }
 

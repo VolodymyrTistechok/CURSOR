@@ -6,9 +6,9 @@ public class Product implements Buyable {
     private String name;
     private double price;
     private int quantity;
-    private ageRestriction restriction;
+    private AgeRestriction restriction;
 
-    public Product(String name, double price, int quantity, ageRestriction restriction) {
+    public Product(String name, double price, int quantity, AgeRestriction restriction) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -32,7 +32,7 @@ public class Product implements Buyable {
         return quantity;
     }
 
-    public ageRestriction getRestriction() {
+    public AgeRestriction getRestriction() {
         return restriction;
     }
 

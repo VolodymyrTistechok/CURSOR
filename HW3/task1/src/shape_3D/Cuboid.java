@@ -1,7 +1,7 @@
 package shape_3D;
 
 import shape_classes.SpaceShape;
-import vertices.vertices3D;
+import vertices.Vertices3D;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public class Cuboid extends SpaceShape {
     private final double height;
     private final double depth;
 
-    public Cuboid(vertices3D pointA, int width, int height, int depth) {
+    public Cuboid(Vertices3D pointA, int width, int height, int depth) {
         vertices = new ArrayList<>();
         vertices.add(pointA);
         this.width = width;
@@ -18,7 +18,7 @@ public class Cuboid extends SpaceShape {
         this.depth = depth;
     }
 
-    public vertices3D getCenter() {
+    public Vertices3D getCenter() {
         return vertices.get(0);
     }
 

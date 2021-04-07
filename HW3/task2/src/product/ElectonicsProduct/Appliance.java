@@ -1,9 +1,9 @@
 package product.ElectonicsProduct;
 
-import product.ageRestriction;
+import product.AgeRestriction;
 
 public class Appliance extends ElectonicsProduct {
-    public Appliance(String name, double price, int quantity, ageRestriction restriction, int guaranteePeriod) {
+    public Appliance(String name, double price, int quantity, AgeRestriction restriction, int guaranteePeriod) {
         super(name, price, quantity, restriction, 6);
     }
 

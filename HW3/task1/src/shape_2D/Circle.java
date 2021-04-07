@@ -1,20 +1,20 @@
 package shape_2D;
 
 import shape_classes.PlaneShape;
-import vertices.vertices2D;
+import vertices.Vertices2D;
 
 import java.util.ArrayList;
 
 public class Circle extends PlaneShape   {
     private final double radius;
 
-    public Circle(vertices2D pointA, int radius) {
+    public Circle(Vertices2D pointA, int radius) {
         vertices = new ArrayList<>();
         vertices.add(pointA);
         this.radius = radius;
     }
 
-    public vertices2D getPointA() {
+    public Vertices2D getPointA() {
         return vertices.get(0);
     }
 

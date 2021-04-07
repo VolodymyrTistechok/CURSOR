@@ -3,7 +3,7 @@ package purchaseManager;
 import product.FoodProduct;
 import product.Product;
 import customer.Customer;
-import product.ageRestriction;
+import product.AgeRestriction;
 
 public class PurchaseManager {
 
@@ -16,7 +16,7 @@ public class PurchaseManager {
                      throw new RuntimeException("The " + product.getName() + " has expired");
                  }
              }
-            if (customer.getAge() < 18 && product.getRestriction().equals(ageRestriction.Teenager)) {
+            if (customer.getAge() < 18 && product.getRestriction().equals(AgeRestriction.Teenager)) {
                 throw new RuntimeException("You are too young to buy this product!");
             }
             double newBalance = customer.getBalance() - product.getPrice();

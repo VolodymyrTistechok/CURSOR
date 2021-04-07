@@ -1,7 +1,7 @@
 package shape_3D;
 
 import shape_classes.SpaceShape;
-import vertices.vertices3D;
+import vertices.Vertices3D;
 
 import java.util.ArrayList;
 
@@ -9,14 +9,14 @@ public class SquarePyramid extends SpaceShape {
     private final double baseWidth;
     private final double height;
 
-    public SquarePyramid(vertices3D pointA, int baseWidth, int height) {
+    public SquarePyramid(Vertices3D pointA, int baseWidth, int height) {
         vertices = new ArrayList<>();
         vertices.add(pointA);
         this.baseWidth = baseWidth;
         this.height = height;
     }
 
-    public vertices3D getPointA() {
+    public Vertices3D getPointA() {
         return vertices.get(0);
     }
 

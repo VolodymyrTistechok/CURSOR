@@ -1,7 +1,7 @@
 package shape_2D;
 
 import shape_classes.PlaneShape;
-import vertices.vertices2D;
+import vertices.Vertices2D;
 
 import java.util.ArrayList;
 
@@ -10,25 +10,25 @@ public class Triangle extends PlaneShape  {
     private final double disBC;
     private final double disCA;
 
-    public Triangle(vertices2D pointA, vertices2D pointB, vertices2D pointC) {
+    public Triangle(Vertices2D pointA, Vertices2D pointB, Vertices2D pointC) {
         vertices = new ArrayList<>();
         vertices.add(pointA);
         vertices.add(pointB);
         vertices.add(pointC);
-        disAB = vertices2D.getDistanceBetweenTwo2DVertices(pointA, pointB);
-        disBC = vertices2D.getDistanceBetweenTwo2DVertices(pointB, pointC);
-        disCA = vertices2D.getDistanceBetweenTwo2DVertices(pointC, pointA);
+        disAB = Vertices2D.getDistanceBetweenTwo2DVertices(pointA, pointB);
+        disBC = Vertices2D.getDistanceBetweenTwo2DVertices(pointB, pointC);
+        disCA = Vertices2D.getDistanceBetweenTwo2DVertices(pointC, pointA);
     }
 
-    public vertices2D getPointA() {
+    public Vertices2D getPointA() {
         return vertices.get(0);
     }
 
-    public vertices2D getPointB() {
+    public Vertices2D getPointB() {
         return vertices.get(1);
     }
 
-    public vertices2D getPointC() {
+    public Vertices2D getPointC() {
         return vertices.get(2);
     }
 
