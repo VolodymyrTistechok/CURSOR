@@ -16,7 +16,7 @@ public class PurchaseManager {
                      throw new RuntimeException("The " + product.getName() + " has expired");
                  }
              }
-            if (customer.getAge() < 18 && product.getRestriction().equals(AgeRestriction.Teenager)) {
+            if (customer.getAge() < 18 && product.getRestriction().equals(AgeRestriction.TEENAGER)) {
                 throw new RuntimeException("You are too young to buy this product!");
             }
             double newBalance = customer.getBalance() - product.getPrice();
