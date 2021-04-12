@@ -1,12 +1,12 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
 
-
-public class MyList<T> {
+public class MyList<T extends Number> {
     private T[] array;
 
     @SuppressWarnings("unchecked")
     public MyList() {
-        this.array = (T[]) new Object[0];
+         this.array = (T[]) new Number[0];
     }
 
     public int sizeArray() {
@@ -45,7 +45,7 @@ public class MyList<T> {
 
     public T largest() {
         T[] newArray = Arrays.copyOf(array, array.length);
-        Arrays.sort(newArray,Collections.reverseOrder());
+        Arrays.sort(newArray, Collections.reverseOrder());
         return newArray[0];
     }
 }
