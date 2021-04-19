@@ -45,10 +45,10 @@ public class Test {
                 {
                     System.out.println(a);
                     b.forEach((c, d) -> {
-                        System.out.println("     " + c);
+                        System.out.println("\t" + c);
                         d.forEach((e, f) -> {
-                            System.out.println("          " + e);
-                            System.out.println("               " + f);
+                            System.out.println("\t\t" + e);
+                            System.out.println("\t\t\t" + f);
                         });
                     });
                 });
