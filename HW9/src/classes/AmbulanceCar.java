@@ -1,3 +1,5 @@
+package classes;
+
 public class AmbulanceCar extends CarDecorator{
 
     public AmbulanceCar(Car car) {

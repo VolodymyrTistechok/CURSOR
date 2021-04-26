@@ -1,3 +1,5 @@
+package classes;
+
 public class CarBMW implements Car {
     private String name;
     private String color;

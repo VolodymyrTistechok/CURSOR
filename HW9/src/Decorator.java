@@ -1,3 +1,8 @@
+import classes.AmbulanceCar;
+import classes.ArmorCar;
+import classes.Car;
+import classes.CarBMW;
+
 public class Decorator {
     public static void main(String[] args) {
         Car bmw = new CarBMW("BMW","blue");

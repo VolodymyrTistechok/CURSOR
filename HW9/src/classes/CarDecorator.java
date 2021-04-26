@@ -1,3 +1,5 @@
+package classes;
+
 public class CarDecorator implements Car{
     private Car car;
 

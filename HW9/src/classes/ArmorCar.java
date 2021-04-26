@@ -1,3 +1,5 @@
+package classes;
+
 public class ArmorCar extends CarDecorator{
 
     public ArmorCar(Car car) {
