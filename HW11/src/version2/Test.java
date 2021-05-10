@@ -2,6 +2,7 @@ package version2;
 
 public class Test {
     public static void main(String[] args) {
+        // two method
         Print printPingPong = new Print();
 
         Ping ping = new Ping(printPingPong);
